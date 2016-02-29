@@ -1,0 +1,13 @@
+
+// responsive mixin
+=break($width)
+    @media (max-width: #{$width})
+        @content
+
+=tablet
+    +break(#{$desktop-width - 1px})
+        @content
+
+=smartphone
+    +break(#{$sp-width - 1px})
+        @content

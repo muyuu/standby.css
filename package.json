@@ -1,0 +1,36 @@
+{
+  "name": "standby.css",
+  "version": "0.1.0",
+  "description": "css(sass) boilerplate set",
+  "main": "",
+  "repository": "https://github.com/muyuu/standby.css",
+  "author": "muyuu",
+  "files": [
+    "README.md",
+    "standby.css",
+    "standby.css.map",
+    "index.html",
+    "sass"
+  ],
+  "license": {
+    "type": "MIT",
+    "url": "http://muyuu.mit-license.org/"
+  },
+  "scripts": {
+    "dev": "gulp",
+    "pkg": "gulp pkg"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-changed": "^1.3.0",
+    "gulp-connect": "^3.1.0",
+    "gulp-csscomb": "^3.0.6",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-open": "^1.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}

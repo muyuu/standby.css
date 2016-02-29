@@ -1,0 +1,35 @@
+.u
+    &-only
+        &--pc
+            +tablet
+                display: none !important
+
+        &--sp
+            display: none !important
+            +smartphone
+                display: initial !important
+
+
+    &-not
+        &--pc
+            display: none !important
+            +tablet
+                display: initial !important
+
+        &--sp
+            +smartphone
+                display: none !important
+
+
+    &-inner
+        &--tablet
+            +tablet
+                margin:
+                    left: $tablet-inner-margin
+                    right: $tablet-inner-margin
+
+        &--sp
+            +smartphone
+                margin:
+                    left: $sp-inner-margin
+                    right: $sp-inner-margin
