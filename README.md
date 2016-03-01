@@ -1,4 +1,4 @@
-# standby.css v0.1.0
+# standby.css v0.2.0
 
 This module is web frontend sass library
 
