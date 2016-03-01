@@ -36,8 +36,8 @@ g.task("css", ()=>{
         outputStyle: 'expanded'
     }))
     .pipe($.autoprefixer([
-        'last 3 versions',
-        'Explorer >= 8'
+        'last 3 version',
+        'IE 8'
     ]))
     .pipe($.csscomb())
     .pipe(minifyCss({
