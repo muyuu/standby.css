@@ -1,7 +1,7 @@
 const g = require("gulp");
 const connect = require("gulp-connect");
+const cleanCSS = require('gulp-clean-css');
 const $ = require( 'gulp-load-plugins' )();
-const minifyCss = require('gulp-minify-css');
 
 const src = "./";
 const dist = "./";
@@ -40,7 +40,7 @@ g.task("css", ()=>{
         'IE 8'
     ]))
     .pipe($.csscomb())
-    .pipe(minifyCss({
+    .pipe(cleanCSS({
         compatibility: 'ie8'
     }))
     .pipe($.sourcemaps.write("./"))
