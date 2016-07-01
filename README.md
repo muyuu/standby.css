@@ -1,4 +1,4 @@
-# standby.css v0.2.0
+# standby.css
 
 This module is web frontend sass library
 
@@ -163,12 +163,12 @@ npm install --save-dev standby.css
 - =twoColFluid
 
 ## for IE
-- =innner-block
+- =inner-block
 - =table-cell($num)
 
 ## css3
 - =opacity($num)
-- =rem($fontsize, $base: $baseFontSizeNum)
+- =rem($fontSize, $base: $baseFontSizeNum)
 - =linkListArrow($size: 10px, $right: 10px, $border-size: 2px, $color: #333)
 
 ## replace images
