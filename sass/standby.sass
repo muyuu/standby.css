@@ -10,11 +10,13 @@
 @import "conf/font"
 @import "conf/easing"
 
+// reset or normalize
+@import "conf/reset"
+@import "conf/normalize"
 @if $reset_type == "reset"
-    @import "conf/reset"
+    +resetCSS
 @else
-    @import "conf/normalize"
-
+    +normalizeCSS
 
 
 // ----------------------------------
