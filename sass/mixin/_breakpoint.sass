@@ -4,10 +4,10 @@
     @media (max-width: #{$width})
         @content
 
-=tablet
+=tablet()
     +break(#{$desktop-width - 1px})
         @content
 
-=smartphone
+=smartphone()
     +break(#{$sp-width - 1px})
         @content
