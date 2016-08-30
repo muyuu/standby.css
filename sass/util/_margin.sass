@@ -1,33 +1,46 @@
 .u
+    $pattern: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100
 
-  &-mg
-    $list: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100
+    =spacingEach($ptn, $vector, $type: 'm')
+        $propName: 'margin'
+        @if $type != 'm'
+            $propName: 'padding'
 
-    &t
-      @each $qt in $list
-        &--#{$qt}
-          margin-top: $qt + px
-    &b
-      @each $qt in $list
-        &--#{$qt}
-          margin-bottom: $qt + px
-    &v
-      @each $qt in $list
-        &--#{$qt}
-          margin-top: $qt + px
-          margin-bottom: $qt + px
+        @each $qt in $ptn
+            &--#{$qt}
+                @if $vector == 't' or $vector == 'y'
+                    #{$propName}-top: $qt + px
+                @if $vector == 'b' or $vector == 'y'
+                    #{$propName}-bottom: $qt + px
+                @if $vector == 'l' or $vector == 'x'
+                    #{$propName}-left: $qt + px
+                @if $vector == 'r' or $vector == 'x'
+                    #{$propName}-right: $qt + px
 
-    &l
-      @each $qt in $list
-        &--#{$qt}
-          margin-left: $qt + px
-    &r
-      @each $qt in $list
-        &--#{$qt}
-          margin-right: $qt + px
+    &-mg
+        &t
+            +spacingEach($pattern, 't')
+        &b
+            +spacingEach($pattern, 'b')
+        &y
+            +spacingEach($pattern, 'y')
+        &l
+            +spacingEach($pattern, 'l')
+        &r
+            +spacingEach($pattern, 'r')
+        &x
+            +spacingEach($pattern, 'x')
 
-    &h
-      @each $qt in $list
-        &--#{$qt}
-          margin-left: $qt + px
-          margin-right: $qt + px
+    &-pd
+        &t
+            +spacingEach($pattern, 't', 'padding')
+        &b
+            +spacingEach($pattern, 'b', 'padding')
+        &y
+            +spacingEach($pattern, 'y', 'padding')
+        &l
+            +spacingEach($pattern, 'l', 'padding')
+        &r
+            +spacingEach($pattern, 'r', 'padding')
+        &x
+            +spacingEach($pattern, 'x', 'padding')
