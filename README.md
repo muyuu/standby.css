@@ -120,10 +120,10 @@ and more support browser flag($support-ie6, $support-ie7, $support-ie8, etc...)
 ## margin
 - u-mgt--(0 ~ 100 step 5)
 - u-mgb--(0 ~ 100 step 5)
-- u-mgv--(0 ~ 100 step 5)
+- u-mgy--(0 ~ 100 step 5)
 - u-mgl--(0 ~ 100 step 5)
 - u-mgr--(0 ~ 100 step 5)
-- u-mgh--(0 ~ 100 step 5)
+- u-mgx--(0 ~ 100 step 5)
 
 ## text
 - u-txt--strong
@@ -168,7 +168,7 @@ npm install --save-dev standby.css
 
 ## css3
 - =opacity($num)
-- =rem($fontSize, $base: $baseFontSizeNum)
+- =rem($fontSize)
 - =linkListArrow($size: 10px, $right: 10px, $border-size: 2px, $color: #333)
 
 ## replace images
