@@ -1,13 +1,19 @@
 .u
     $pattern: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100
 
-    =spacingEach($ptn, $vector, $type: 'm')
+    =spacingEach($ptn, $vector, $type: 'm', $device: 'pc')
         $propName: 'margin'
         @if $type != 'm'
             $propName: 'padding'
 
+        $deviceType: ''
+        @if $device == 'tablet'
+            $deviceType: '--tablet'
+        @if $device == 'sp'
+            $deviceType: '--sp'
+
         @each $qt in $ptn
-            &--#{$qt}
+            &--#{$qt}#{$deviceType}
                 @if $vector == 't' or $vector == 'y'
                     #{$propName}-top: $qt + px
                 @if $vector == 'b' or $vector == 'y'
@@ -16,6 +22,7 @@
                     #{$propName}-left: $qt + px
                 @if $vector == 'r' or $vector == 'x'
                     #{$propName}-right: $qt + px
+
 
     &-mg
         &t
@@ -44,3 +51,63 @@
             +spacingEach($pattern, 'r', 'padding')
         &x
             +spacingEach($pattern, 'x', 'padding')
+
+
+    +tablet
+        &-mg
+            &t
+                +spacingEach($pattern, 't', 'm', 'tablet')
+            &b
+                +spacingEach($pattern, 'b', 'm', 'tablet')
+            &y
+                +spacingEach($pattern, 'y', 'm', 'tablet')
+            &l
+                +spacingEach($pattern, 'l', 'm', 'tablet')
+            &r
+                +spacingEach($pattern, 'r', 'm', 'tablet')
+            &x
+                +spacingEach($pattern, 'x', 'm', 'tablet')
+
+        &-pd
+            &t
+                +spacingEach($pattern, 't', 'padding', 'tablet')
+            &b
+                +spacingEach($pattern, 'b', 'padding', 'tablet')
+            &y
+                +spacingEach($pattern, 'y', 'padding', 'tablet')
+            &l
+                +spacingEach($pattern, 'l', 'padding', 'tablet')
+            &r
+                +spacingEach($pattern, 'r', 'padding', 'tablet')
+            &x
+                +spacingEach($pattern, 'x', 'padding', 'tablet')
+
+
+    +smartphone
+        &-mg
+            &t
+                +spacingEach($pattern, 't', 'm', 'sp')
+            &b
+                +spacingEach($pattern, 'b', 'm', 'sp')
+            &y
+                +spacingEach($pattern, 'y', 'm', 'sp')
+            &l
+                +spacingEach($pattern, 'l', 'm', 'sp')
+            &r
+                +spacingEach($pattern, 'r', 'm', 'sp')
+            &x
+                +spacingEach($pattern, 'x', 'm', 'sp')
+
+        &-pd
+            &t
+                +spacingEach($pattern, 't', 'padding', 'sp')
+            &b
+                +spacingEach($pattern, 'b', 'padding', 'sp')
+            &y
+                +spacingEach($pattern, 'y', 'padding', 'sp')
+            &l
+                +spacingEach($pattern, 'l', 'padding', 'sp')
+            &r
+                +spacingEach($pattern, 'r', 'padding', 'sp')
+            &x
+                +spacingEach($pattern, 'x', 'padding', 'sp')
