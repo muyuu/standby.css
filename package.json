@@ -14,7 +14,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "gulp",
+    "start": "gulp",
     "pkg": "gulp pkg"
   },
   "devDependencies": {
