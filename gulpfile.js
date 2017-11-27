@@ -5,6 +5,7 @@ const $ = require( 'gulp-load-plugins' )();
 
 const src = "./";
 const dist = "./";
+const docs = "docs/";
 const port = 5555;
 
 s = {
@@ -14,13 +15,14 @@ s = {
 
 d = {
     root: dist,
+    docs: dist + docs,
     css: dist
 };
 
 // local server
 g.task('connect', ()=>{
   connect.server({
-    root: d.root,
+    root: d.docs,
     port: port,
     livereload: true
   });
@@ -44,7 +46,8 @@ g.task("css", ()=>{
         compatibility: 'ie8'
     }))
     .pipe($.sourcemaps.write("./"))
-    .pipe(g.dest(d.css));
+    .pipe(g.dest(d.css))
+    .pipe(g.dest(d.docs));
 });
 
 
